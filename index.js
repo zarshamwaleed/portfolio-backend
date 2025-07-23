@@ -53,6 +53,10 @@ app.patch("/api/reviews/:id/helpful", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+app.get("/", (req, res) => {
+  res.send("✅ Backend API is running!");
+});
+
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
